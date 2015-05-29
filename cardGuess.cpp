@@ -43,7 +43,7 @@ int histoGetMaxIndex(unsigned int *data)
 
 float histoGetMean(unsigned int *data)
 {
-	unsigned int sum, weighted;
+	unsigned int sum = 0, weighted = 0;
 	for (int t = 0; t < 52; t++)
 	{
 		weighted += data[t] * t;
