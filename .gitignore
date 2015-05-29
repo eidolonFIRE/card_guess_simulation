@@ -1,0 +1,8 @@
+# Compile Output Directory
+obj/
+*.exe
+*.out
+
+# Sublime 3 Files
+*.sublime-project
+*.sublime-workspace
