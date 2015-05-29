@@ -55,7 +55,7 @@ float histoGetMean(unsigned int *data)
 void printHistoData(unsigned int *data)
 {
 	printf("Histo Data:\n");
-	for (int t = 0; t < 52; t++) printf("\t%2d:%7d\n",t, data[t]);
+	for (int t = 0; t < 52; t++) printf("\t%2d, %7d\n",t, data[t]);
 }
 
 void printHisto(int height, unsigned int *data)
@@ -78,7 +78,7 @@ void printHisto(int height, unsigned int *data)
 
 	for (int x = 0; x < 52; x++) printf("-");
 	printf("\n");
-	//printHistoData(data);
+	printHistoData(data);
 }
 
 
