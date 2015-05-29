@@ -12,13 +12,13 @@ using namespace std;
 cDeck::cDeck()
 {
 	// init deck
-	for (int t = 0; t < 52; t++) cards[t] = (t / 13 + 1);
+	for (int t = 0; t < 52; t++) cards[t] = (t / 13);
 }
 
-void cDeck::printDeck()
+void cDeck::print()
 {
-	for (int t = 0; t < 52; t++) cout << cards[t];
-	cout << endl;
+	for (int t = 0; t < 52; t++) printf("%c", cards[t] + 1);
+	printf("\n");
 }
 
 void cDeck::shuffle()
@@ -35,6 +35,7 @@ void cDeck::shuffle()
 				if (aa < 26)
 				{
 					temp[ii] = cards[aa];
+					ii++;
 					aa++;
 				}
 			}
@@ -43,14 +44,13 @@ void cDeck::shuffle()
 				if (bb < 52)
 				{
 					temp[ii] = cards[bb];
+					ii++;
 					bb++;
 				}
 			}
-			ii++;
 			if (ii >= 52) done = true;
 		}
 		memcpy(cards, temp, 52 * sizeof(char));
 	}
 }
-
 

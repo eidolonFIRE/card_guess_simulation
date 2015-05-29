@@ -1,9 +1,8 @@
 
-#define NONE    0
-#define HEART   1
-#define SPADE   2
-#define DIAMOND 3
-#define CLUB    4
+#define HEART   0
+#define DIAMOND 1
+#define CLUB    2
+#define SPADE   3
 
 class cDeck
 {
@@ -12,7 +11,6 @@ class cDeck
 
 		cDeck();
 
-		void printDeck();
+		void print();
 		void shuffle();
-		char flipCard();
 };
