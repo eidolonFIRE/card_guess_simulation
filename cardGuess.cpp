@@ -64,11 +64,11 @@ void printHisto(int height, unsigned int *data)
 	//printf("\033[0;0f"); 
 	for (int x = 0; x < 52; x++) printf("-");
 	printf("\n");
-	for (int y = height; y > 0; y--)
+	for (int y = height - 1; y >= 0; y--)
 	{
 		for (int x = 0; x < 52; x++)
 		{
-			if (data[x] <= int((float(y) + 0.5f) * (float)scale / (float)height) || data[x] == 0)
+			if (data[x] <= int((float(y + 0.2)) * (float)scale / (float)height) || data[x] == 0)
 				printf(" ");
 			else
 				printf("|");
